@@ -10,12 +10,12 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:allowBackup="false"
-        android:name=".MyApplication"
-        android:icon="@mipmap/ic_launcher"
-        android:label="flutter_alipush"
-        tools:replace="android:allowBackup,android:label,android:icon"
-        tools:ignore="GoogleAppIndexingWarning">
+    android:allowBackup="false"
+    android:name=".MyApplication"
+    android:icon="@mipmap/ic_launcher"
+    android:label="flutter_alipush"
+    tools:replace="android:allowBackup,android:label,android:icon"
+    tools:ignore="GoogleAppIndexingWarning">
 
         <meta-data
             android:name="com.alibaba.app.appkey"

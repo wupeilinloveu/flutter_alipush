@@ -47,8 +47,17 @@ class _MyHomePageState extends State<MyHomePage> {
     //获取device id
     initPlatformState();
 
+
     //推送通知的处理 (注意，这里的id:针对Android8.0以上的设备来设置通知通道,客户端的id跟阿里云的通知通道要一致，否则收不到通知)
-    rammus.setupNotificationManager(id: "alipush notification",name: "rammus",description: "rammus test",);
+    //Push Notification
+    var channels = List<rammus.NotificationChannel>();
+    channels.add(rammus.NotificationChannel(
+      "alipush notification",
+      "rammus",
+      "rammus test",
+      importance: rammus.AndroidNotificationImportance.MAX,
+    ));
+
     rammus.onNotification.listen((data){
       print("----------->notification here ${data.summary}");
     });
